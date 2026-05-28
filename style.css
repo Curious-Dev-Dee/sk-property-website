@@ -113,11 +113,59 @@ section { padding: 88px 6%; }
 .pcard-wa { display: block; text-align: center; background: var(--green-wa); color: white; padding: 10px; border-radius: var(--r); margin-top: 15px; }
 
 /* MANAGEMENT TEAM GRID */
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; }
-.agent-frame { border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(17, 120, 64, .18); position: relative; height: 400px; }
-.agent-nameplate { position: absolute; bottom: 0; width: 100%; padding: 20px; background: rgba(9, 18, 14, 0.85); backdrop-filter: blur(5px); border-top: 1px solid rgba(17, 120, 64, .15); text-align: center; }
-.agent-name { font-family: var(--ff-display); font-size: 1.5rem; color: var(--white); }
-.agent-title { font-size: .8rem; color: var(--gold); text-transform: uppercase; }
+.team-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 30px; 
+    margin-top: 40px; 
+}
+
+.agent-frame { 
+    border-radius: var(--r-lg); 
+    overflow: hidden; 
+    border: 1px solid rgba(17, 120, 64, .18); 
+    background: var(--dark2);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+}
+
+.agent-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--gold);
+}
+
+.agent-frame img { 
+    height: 280px; /* Reduced from 400px so it's not overly big */
+    width: 100%;
+    object-fit: cover; 
+    object-position: top center; /* Keeps the focus on the face */
+}
+
+.agent-nameplate { 
+    padding: 25px 20px; 
+    text-align: center; 
+    border-top: 3px solid var(--gold); /* Adds a premium green accent line under the photo */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures the buttons align at the bottom even if names are long */
+}
+
+.agent-name { 
+    font-family: var(--ff-display); 
+    font-size: 1.5rem; 
+    color: var(--white); 
+    margin-bottom: 5px;
+}
+
+.agent-title { 
+    font-size: .8rem; 
+    color: var(--gold); 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    margin-bottom: 15px; /* Adds breathing room before the button */
+}
 
 /* CONTACT FORM */
 .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
