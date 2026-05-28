@@ -269,19 +269,27 @@ footer { background: var(--dark2); padding: 30px 6%; text-align: center; border-
 /* Photo Gallery Grid */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
 }
 
+.full-page-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
 .gallery-img {
-    height: 200px;
+    height: 250px;
+    width: 100%;
     border-radius: var(--r-lg);
     cursor: pointer;
-    transition: transform var(--t);
+    transition: transform var(--t), box-shadow var(--t);
+    object-fit: cover;
 }
 
 .gallery-img:hover {
     transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* Sticky Sidebar */

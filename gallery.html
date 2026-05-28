@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — SK Property Odisha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav class="nav" id="nav">
+        <div class="nav-brand">
+            <img src="images/sklogo.jpeg" alt="SK Property Logo" style="height: 40px; width: auto; border-radius: 5px; margin-bottom: 5px;">
+            <span class="nav-brand-main">SK Property</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <!-- Highlighted Gallery Link -->
+            <li><a href="gallery.html" style="color: var(--gold);">Gallery</a></li>
+            <li><a href="about.html">Management</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a class="nav-wa" href="https://wa.me/916370534077?text=Hi!%20I%20visited%20SKpropertyodisha.com%20and%20want%20to%20know%20more." target="_blank">💬 WhatsApp Us</a>
+        </div>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <section class="hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px; background: linear-gradient(rgba(9, 18, 14, 0.9), rgba(9, 18, 14, 0.95)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80') center/cover;">
+        <div class="hero-content">
+            <div class="chip">Our Portfolio</div>
+            <h1 class="hero-h1">Photo Gallery</h1>
+            <p class="hero-desc">Take a look at our developed plots, ongoing projects, and ready-to-move properties across Odisha.</p>
+        </div>
+    </section>
+
+    <!-- ══ FULL GALLERY GRID ══ -->
+    <section style="padding: 60px 6%; background: var(--dark2);">
+        <div class="gallery-grid full-page-gallery sr">
+            <!-- You can add as many images here as you want -->
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1629196914282-e3170e176c99?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd64bd28?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Gallery Photo" class="gallery-img">
+        </div>
+        
+        <div class="sr" style="text-align: center; margin-top: 50px;">
+            <p style="color: var(--muted); margin-bottom: 20px;">Want to see these properties in person?</p>
+            <a href="contact.html" class="btn btn-gold">Book a Free Site Visit</a>
+        </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-brand">SK Property Odisha</div>
+        <div class="footer-note">Website Developed by Ajak Solutions</div>
+    </footer>
+
+    <!-- ══ FLOATING WHATSAPP ══ -->
+    <a class="fwa" href="https://wa.me/916370534077" target="_blank">💬</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
