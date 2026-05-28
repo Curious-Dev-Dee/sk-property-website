@@ -15,9 +15,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
    2. DYNAMIC PROPERTIES DISPLAY & MODAL LOGIC
    ========================================================= */
 const propertiesContainer = document.querySelector('#properties');
-const modal = document.getElementById("propertyModal");
-const modalBody = document.getElementById("modalBody");
-const closeBtn = document.querySelector(".close-btn");
 
 // Expanded Placeholder data with description and dummy video
 const mockProperties = [
@@ -28,7 +25,7 @@ const mockProperties = [
         location: "Nuagaon, Bhubaneswar",
         image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500&q=80",
         description: "An excellent opportunity to invest in a highly sought-after area. This plot is ready for residential construction with all major utilities (water, electricity) nearby. Close to schools and local markets.",
-        video: "https://www.w3schools.com/html/mov_bbb.mp4" // Dummy video URL
+        video: "https://www.w3schools.com/html/mov_bbb.mp4" 
     },
     {
         id: 2,
@@ -50,6 +47,49 @@ const mockProperties = [
     }
 ];
 
+// Generic functions to open and close any modal by its ID
+window.openModalById = function(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+window.closeModalById = function(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    
+    // If it's the property modal, pause the video when closed
+    if(modalId === 'propertyModal') {
+        const video = document.getElementById("modalBody").querySelector('video');
+        if (video) video.pause();
+    }
+}
+
+// Function to open the specific Property Modal and inject data
+window.openPropertyModal = function(id) {
+    const prop = mockProperties.find(p => p.id === id);
+    const modalBody = document.getElementById("modalBody");
+    
+    modalBody.innerHTML = `
+        <div class="modal-details">
+            <h2>${prop.title}</h2>
+            <p class="location">📍 ${prop.location}</p>
+            <p class="price">${prop.price}</p>
+            <div class="modal-media">
+                <img src="${prop.image}" alt="Main Property Photo">
+                <video controls>
+                    <source src="${prop.video}" type="video/mp4">
+                </video>
+            </div>
+            <div class="modal-desc">
+                <h3>Property Description</h3>
+                <p>${prop.description}</p>
+            </div>
+            <!-- Opens Contact modal from within property modal -->
+            <button class="contact-btn" style="width: 200px;" onclick="closeModalById('propertyModal'); openModalById('contactModal');">Contact Manager</button>
+        </div>
+    `;
+    
+    openModalById('propertyModal');
+}
+
 // Function to generate the HTML cards
 function renderProperties(properties) {
     propertiesContainer.innerHTML = '<h2>Featured Properties</h2><div class="property-grid"></div>';
@@ -64,64 +104,27 @@ function renderProperties(properties) {
                 <h3>${prop.title}</h3>
                 <p class="location">📍 ${prop.location}</p>
                 <p class="price">${prop.price}</p>
-                <button class="contact-btn" onclick="openModal(${prop.id})">View Details</button>
+                <button class="contact-btn" onclick="openPropertyModal(${prop.id})">View Details</button>
             </div>
         `;
         grid.appendChild(card);
     });
 }
 
-// Function to open the modal and populate data
-window.openModal = function(id) {
-    // Find the specific property the user clicked
-    const prop = mockProperties.find(p => p.id === id);
-    
-    // Inject the HTML into the popup
-    modalBody.innerHTML = `
-        <div class="modal-details">
-            <h2>${prop.title}</h2>
-            <p class="location">📍 ${prop.location}</p>
-            <p class="price">${prop.price}</p>
-            
-            <div class="modal-media">
-                <img src="${prop.image}" alt="Main Property Photo">
-                <video controls>
-                    <source src="${prop.video}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            
-            <div class="modal-desc">
-                <h3>Property Description</h3>
-                <p>${prop.description}</p>
-            </div>
-            <button class="contact-btn" style="width: 200px;">Contact Manager</button>
-        </div>
-    `;
-    
-    // Show the modal
-    modal.style.display = "block";
-}
-
-// Close modal when clicking the 'X'
-closeBtn.onclick = function() {
-    modal.style.display = "none";
-    // Pause video when closing (optional but good practice)
-    const video = modalBody.querySelector('video');
-    if (video) video.pause();
-}
-
-// Close modal when clicking anywhere outside of the popup box
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        const video = modalBody.querySelector('video');
-        if (video) video.pause();
-    }
-}
-
 // Run the function immediately
 renderProperties(mockProperties);
+
+// Close modals when clicking anywhere on the dark background outside the popup
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        // Pause video if property modal is closed this way
+        if(event.target.id === 'propertyModal') {
+            const video = document.getElementById("modalBody").querySelector('video');
+            if (video) video.pause();
+        }
+    }
+}
 
 
 /* =========================================================

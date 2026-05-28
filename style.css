@@ -408,3 +408,49 @@ footer p {
     color: var(--text-dark);
     margin-bottom: 20px;
 }
+
+/* =========================================================
+   11. NEW UPDATES: HERO TEXT, WHATSAPP, AND SHIVLING
+   ========================================================= */
+
+/* Differentiating the Hero Text */
+.hero-content .main-title {
+    font-size: 3.5rem;
+    color: var(--primary-green);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.hero-content .association-text {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Sizing the Shivling Image */
+.shivling-img {
+    max-width: 300px; /* Limits how wide it can get */
+    width: 100%; /* Keeps it responsive on small screens */
+    height: auto;
+    border: 3px solid var(--accent-gold); /* Thinner border so it's less heavy */
+    border-radius: 10px;
+}
+
+/* WhatsApp Clickable Buttons */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
