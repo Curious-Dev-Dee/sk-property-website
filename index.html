@@ -1,107 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Property Odisha</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SK Property Odisha — Invest Today. Better Tomorrow.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <img src="images/sklogo.jpeg" alt="SK Property Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#" onclick="openModalById('aboutModal'); return false;">About Us</a></li>
-                <li><a href="#team">Management</a></li>
-                <li><a href="#properties">Properties</a></li>
-                <li><a href="#" onclick="openModalById('contactModal'); return false;">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="main-title">SK Property</h1>
-            <p class="association-text">In association with Swarna Bhumi Developers</p>
-            <h2>Invest Today. Better Tomorrow.</h2>
+    <nav class="nav" id="nav">
+        <div class="nav-brand">
+            <img src="images/sklogo.jpeg" alt="SK Property Logo" style="height: 40px; width: auto; border-radius: 5px; margin-bottom: 5px;">
+            <span class="nav-brand-main">SK Property</span>
         </div>
-        <img src="images/skshivling.jpeg" alt="Shivling Blessing" class="hero-image shivling-img">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#team">Management</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a class="nav-wa" href="https://wa.me/916370534077?text=Hi!%20I%20visited%20SKpropertyodisha.com%20and%20want%20to%20know%20more." target="_blank">
+                💬 WhatsApp Us
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        
+        <div class="hero-left">
+            <div class="chip hero-kicker">✦ In association with Swarna Bhumi Developers</div>
+            <h1 class="hero-h1">Invest Today.<br/><em>Better</em><br/>Tomorrow.</h1>
+            <p class="hero-desc">Premium plots, flats and duplex homes in Odisha's most connected corridors. Clear titles. No hidden charges. Let our expert management team guide your future.</p>
+            <div class="hero-actions">
+                <a href="#properties" class="btn btn-gold">View Properties</a>
+                <a href="https://wa.me/916370534077" class="btn btn-wa" target="_blank">Chat with Sales</a>
+            </div>
+            <div class="hero-trust">
+                <div class="ht-item"><div class="ht-dot"></div>100% Legal Titles</div>
+                <div class="ht-item"><div class="ht-dot"></div>EMI Available</div>
+                <div class="ht-item"><div class="ht-dot"></div>Free Site Visit</div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-img-main">
+                <img src="images/skshivling.jpeg" alt="Shivling Blessing" style="border: 2px solid var(--gold); border-radius: var(--r-lg);" />
+            </div>
+        </div>
     </section>
 
-    <section id="team" class="team-section">
-        <h2>Our Management Team</h2>
+    <div class="stats-bar sr">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-num" data-count="500">0</div>
+                <div class="stat-label">Happy Families</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" data-count="15">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">Premium</div>
+                <div class="stat-label">Locations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" data-count="0">₹0</div>
+                <div class="stat-label">Hidden Charges</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="properties" id="properties">
+        <div class="sec-head sr">
+            <div class="chip">Our Properties</div>
+            <h2 class="sec-title">Find the Property<br/>That's Right for You</h2>
+        </div>
+
+        <div class="tabs sr">
+            <button class="tab on" onclick="switchTab('plots',this)">Featured Plots</button>
+            <button class="tab" onclick="switchTab('flats',this)">Flats & Commercial</button>
+        </div>
+
+        <div class="tc on" id="tc-plots">
+            <div class="prop-grid">
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500&q=80" alt="Plot" />
+                        <div class="pcard-badge badge-avail">Available</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Prime Plot in Jagannath Vihar</div>
+                        <div class="pcard-loc">📍 Nuagaon, Bhubaneswar</div>
+                        <div class="pcard-price">₹ 45,00,000</div>
+                        <div class="pcard-note">Excellent investment ready for construction.</div>
+                        <a class="pcard-wa" href="https://wa.me/916370534077?text=Hi%20interested%20in%20Jagannath%20Vihar%20Plot." target="_blank">💬 Enquire on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=500&q=80" alt="Plot" />
+                        <div class="pcard-badge badge-hot">🔥 Hot Property</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Residential Land</div>
+                        <div class="pcard-loc">📍 Bhubaneswar Outskirts</div>
+                        <div class="pcard-price">₹ 32,00,000</div>
+                        <div class="pcard-note">Secure your future in a rapidly developing area.</div>
+                        <a class="pcard-wa" href="https://wa.me/916370534077?text=Hi%20interested%20in%20Residential%20Land." target="_blank">💬 Enquire on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tc" id="tc-flats">
+            <div class="prop-grid">
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&q=80" alt="Flat" />
+                        <div class="pcard-badge badge-ready">Ready to Move</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Commercial Space</div>
+                        <div class="pcard-loc">📍 Khordha, Odisha</div>
+                        <div class="pcard-price">₹ 20,000 / month</div>
+                        <div class="pcard-note">Located on main road with high traffic.</div>
+                        <a class="pcard-wa" href="https://wa.me/916370534077?text=Hi%20interested%20in%20Commercial%20Space." target="_blank">💬 Enquire on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="agent" id="team">
+        <div class="sec-head sr text-center">
+            <div class="chip">Leadership</div>
+            <h2 class="sec-title">Our Management Team</h2>
+        </div>
+        
         <div class="team-grid">
-            
-            <div class="team-member">
-                <img src="images/skdirector.jpeg" alt="B. Mishra - Proprietor">
-                <h3>B. Mishra</h3>
-                <p>Proprietor</p>
-                <a href="https://wa.me/919090762214?text=Hi%20found%20a%20property%20on%20your%20website%20Skpropertyodisha.com%20and%20wants%20to%20know%20more." target="_blank" class="whatsapp-btn">💬 Chat: 9090762214</a>
+            <div class="agent-frame sr">
+                <img src="images/skdirector.jpeg" alt="B. Mishra" />
+                <div class="agent-nameplate">
+                    <div class="agent-name">B. Mishra</div>
+                    <div class="agent-title">Proprietor</div>
+                    <a href="https://wa.me/919090762214" target="_blank" class="btn-ghost" style="display:block; text-align:center; margin-top:10px; padding: 8px;">Chat: 9090762214</a>
+                </div>
             </div>
 
-            <div class="team-member">
-                <img src="images/skpropiter.jpeg" alt="M. Kara - Managing Director">
-                <h3>M. Kara</h3>
-                <p>Managing Director</p>
-                <a href="https://wa.me/917008328481?text=Hi%20found%20a%20property%20on%20your%20website%20Skpropertyodisha.com%20and%20wants%20to%20know%20more." target="_blank" class="whatsapp-btn">💬 Chat: 7008328481</a>
+            <div class="agent-frame sr">
+                <img src="images/skpropiter.jpeg" alt="M. Kara" />
+                <div class="agent-nameplate">
+                    <div class="agent-name">M. Kara</div>
+                    <div class="agent-title">Managing Director</div>
+                    <a href="https://wa.me/917008328481" target="_blank" class="btn-ghost" style="display:block; text-align:center; margin-top:10px; padding: 8px;">Chat: 7008328481</a>
+                </div>
             </div>
 
-            <div class="team-member">
-                <img src="images/sksalesmanager.jpeg" alt="B. Satapathy - Sales Manager">
-                <h3>B. Satapathy</h3>
-                <p>Sales Manager</p>
-                <a href="https://wa.me/916370534077?text=Hi%20found%20a%20property%20on%20your%20website%20Skpropertyodisha.com%20and%20wants%20to%20know%20more." target="_blank" class="whatsapp-btn">💬 Chat: 6370534077</a>
+            <div class="agent-frame sr">
+                <img src="images/sksalesmanager.jpeg" alt="B. Satapathy" />
+                <div class="agent-nameplate">
+                    <div class="agent-name">B. Satapathy</div>
+                    <div class="agent-title">Sales Manager</div>
+                    <a href="https://wa.me/916370534077" target="_blank" class="btn-ghost" style="display:block; text-align:center; margin-top:10px; padding: 8px;">Chat: 6370534077</a>
+                </div>
             </div>
-
         </div>
     </section>
 
-    <section id="properties">
-        </section>
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div>
+                <div class="sr">
+                    <div class="chip">Get in Touch</div>
+                    <h2 class="sec-title">Visit Our Office</h2>
+                    <p class="sec-sub">Plot No- 21/541, Jagannath Vihar, Nuagaon, Bhubaneswar, Khordha, Odisha, PIN- 751002</p>
+                </div>
+            </div>
+
+            <div class="sr-r">
+                <div class="cform" id="cformWrap">
+                    <div class="fg">
+                        <label class="fl">Your Full Name</label>
+                        <input id="fn" class="fi" type="text" placeholder="Your Name" />
+                    </div>
+                    <div class="fg">
+                        <label class="fl">WhatsApp Number</label>
+                        <input id="fp" class="fi" type="tel" placeholder="Your Number" />
+                    </div>
+                    <button class="fsub" onclick="submitForm()">📅 Request Site Visit</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p><strong>Office Address:</strong> Plot No- 21/541, Jagannath Vihar, Nuagaon, Bhubaneswar, Khordha, Odisha, PIN- 751002</p>
-        <br>
-        <p>Website Developed by Satyaranjan</p>
+        <div class="footer-brand">SK Property Odisha</div>
+        <div class="footer-note">Website Developed by Ajak Solutions</div>
     </footer>
 
-    <div id="propertyModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModalById('propertyModal')">&times;</span>
-            <div id="modalBody"></div>
-        </div>
-    </div>
-
-    <div id="aboutModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModalById('aboutModal')">&times;</span>
-            <h2>About SK Property</h2>
-            <div class="modal-desc">
-                <p>Welcome to SK Property, Odisha's premier real estate consultancy. In association with Swarna Bhumi Developers, we are dedicated to helping you find the perfect investment for your future.</p>
-                <br>
-                <p>Our philosophy is simple: <strong>Invest Today. Better Tomorrow.</strong> Whether you are looking for residential plots, commercial spaces, or investment lands, our experienced management team is here to guide you every step of the way with transparency and trust.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModalById('contactModal')">&times;</span>
-            <h2>Contact Information</h2>
-            <div class="modal-desc">
-                <p><strong>📍 Office Address:</strong><br>Plot No- 21/541, Jagannath Vihar, Nuagaon, Bhubaneswar, Khordha, Odisha, PIN- 751002</p>
-                <hr style="margin: 20px 0; border: 1px solid #eee;">
-                <h3>Get in Touch</h3>
-                <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                    <li style="margin-bottom: 10px;"><strong>B. Mishra (Proprietor):</strong> <a href="https://wa.me/919090762214" target="_blank" style="color: green; text-decoration: none;">9090762214</a></li>
-                    <li style="margin-bottom: 10px;"><strong>M. Kara (Managing Director):</strong> <a href="https://wa.me/917008328481" target="_blank" style="color: green; text-decoration: none;">7008328481</a></li>
-                    <li style="margin-bottom: 10px;"><strong>B. Satapathy (Sales Manager):</strong> <a href="https://wa.me/916370534077" target="_blank" style="color: green; text-decoration: none;">6370534077</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <a class="fwa" href="https://wa.me/916370534077?text=Hi%20I%20found%20SK%20Property%20Odisha%20and%20want%20to%20know%20more." target="_blank">💬</a>
 
     <script src="script.js"></script>
 </body>
