@@ -16,12 +16,14 @@
             <img src="images/sklogo.jpeg" alt="SK Property Logo" style="height: 40px; width: auto; border-radius: 5px; margin-bottom: 5px;">
             <span class="nav-brand-main">SK Property</span>
         </div>
+
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#properties">Properties</a></li>
-            <li><a href="#team">Management</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="properties.html">Properties</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+
         <div class="nav-right">
             <a class="nav-wa" href="https://wa.me/916370534077?text=Hi!%20I%20visited%20SKpropertyodisha.com%20and%20want%20to%20know%20more." target="_blank">
                 💬 WhatsApp Us
@@ -29,28 +31,36 @@
         </div>
     </nav>
 
+    <!-- ══ BUYER-CENTRIC HERO ══ -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
+        <!-- A subtle, dark premium architectural background -->
+        <div class="hero-bg" style="background: linear-gradient(rgba(9, 18, 14, 0.85), rgba(9, 18, 14, 0.95)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80') center/cover;"></div>
         
-        <div class="hero-left">
+        <div class="hero-content">
             <div class="chip hero-kicker">✦ In association with Swarna Bhumi Developers</div>
-            <h1 class="hero-h1">Invest Today.<br/><em>Better</em><br/>Tomorrow.</h1>
-            <p class="hero-desc">Premium plots, flats and duplex homes in Odisha's most connected corridors. Clear titles. No hidden charges. Let our expert management team guide your future.</p>
-            <div class="hero-actions">
-                <a href="#properties" class="btn btn-gold">View Properties</a>
-                <a href="https://wa.me/916370534077" class="btn btn-wa" target="_blank">Chat with Sales</a>
+            <h1 class="hero-h1">Find Your Perfect Property<br/>in Odisha.</h1>
+            <p class="hero-desc">100% Legal. Clear Titles. Zero Hidden Charges. Explore premium plots and ready-to-move homes handpicked by our experts.</p>
+            
+            <!-- Quick Search Bar (Improves UX) -->
+            <div class="search-bar">
+                <select class="fi search-input">
+                    <option>Property Type</option>
+                    <option>Open Plots</option>
+                    <option>Flats & Duplex</option>
+                    <option>Commercial</option>
+                </select>
+                <select class="fi search-input">
+                    <option>Location</option>
+                    <option>Bhubaneswar</option>
+                    <option>Khordha</option>
+                    <option>Cuttack</option>
+                </select>
+                <a href="properties.html" class="btn btn-gold search-btn">Search Properties</a>
             </div>
-            <div class="hero-trust">
-                <div class="ht-item"><div class="ht-dot"></div>100% Legal Titles</div>
-                <div class="ht-item"><div class="ht-dot"></div>EMI Available</div>
-                <div class="ht-item"><div class="ht-dot"></div>Free Site Visit</div>
-            </div>
-        </div>
-
-        <div class="hero-right">
-            <div class="hero-img-main">
-                <img src="images/skshivling.jpeg" alt="Shivling Blessing" style="border: 2px solid var(--gold); border-radius: var(--r-lg);" />
+            
+            <div class="hero-trust" style="justify-content: center; margin-top: 30px;">
+                <div class="ht-item"><div class="ht-dot"></div>RERA Compliant Options</div>
+                <div class="ht-item"><div class="ht-dot"></div>Bank Loan Assistance</div>
             </div>
         </div>
     </section>

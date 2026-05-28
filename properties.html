@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties — SK Property Odisha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-brand">
+            <img src="images/sklogo.jpeg" alt="SK Property Logo" style="height: 40px; width: auto; border-radius: 5px; margin-bottom: 5px;">
+            <span class="nav-brand-main">SK Property</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html" style="color: var(--gold);">Properties</a></li>
+            <li><a href="about.html">Management</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a class="nav-wa" href="https://wa.me/916370534077?text=Hi!%20I%20visited%20SKpropertyodisha.com%20and%20want%20to%20know%20more." target="_blank">
+                💬 WhatsApp Us
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px; background: linear-gradient(rgba(9, 18, 14, 0.9), rgba(9, 18, 14, 0.95)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover;">
+        <div class="hero-content">
+            <div class="chip">Complete Catalog</div>
+            <h1 class="hero-h1">Explore Our Properties</h1>
+            <p class="hero-desc">Browse our verified, 100% legal, and strictly vetted real estate opportunities across Odisha.</p>
+        </div>
+    </section>
+
+    <section class="properties" id="properties" style="padding-top: 40px;">
+        <div class="tabs sr">
+            <button class="tab on" onclick="switchTab('plots',this)">Open Plots</button>
+            <button class="tab" onclick="switchTab('flats',this)">Flats & Commercial</button>
+        </div>
+
+        <div class="tc on" id="tc-plots">
+            <div class="prop-grid">
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500&q=80" alt="Plot" />
+                        <div class="pcard-badge badge-avail">Available</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Prime Plot in Jagannath Vihar</div>
+                        <div class="pcard-loc">📍 Nuagaon, Bhubaneswar</div>
+                        <div class="pcard-price">₹ 45,00,000</div>
+                        <div class="pcard-note">1200 Sq. Ft. · East Facing · Clear Title</div>
+<a href="property-detail.html" class="pcard-wa" style="background: var(--gold); color: var(--dark);">View Full Details</a>
+                    </div>
+                </div>
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=500&q=80" alt="Plot" />
+                        <div class="pcard-badge badge-hot">🔥 Hot Property</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Highway Facing Land</div>
+                        <div class="pcard-loc">📍 Bhubaneswar Outskirts</div>
+                        <div class="pcard-price">₹ 32,00,000</div>
+                        <div class="pcard-note">1500 Sq. Ft. · Corner Plot · EMI Available</div>
+<a href="property-detail.html" class="pcard-wa" style="background: var(--gold); color: var(--dark);">View Full Details</a>
+                    </div>
+                </div>
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1629196914282-e3170e176c99?w=500&q=80" alt="Plot" />
+                        <div class="pcard-badge badge-avail">Available</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Residential Plot</div>
+                        <div class="pcard-loc">📍 Quiet Locality, Cuttack Area</div>
+                        <div class="pcard-price">₹ 25,00,000</div>
+                        <div class="pcard-note">1000 Sq. Ft. · SBI Loan Approved</div>
+<a href="property-detail.html" class="pcard-wa" style="background: var(--gold); color: var(--dark);">View Full Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tc" id="tc-flats">
+            <div class="prop-grid">
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&q=80" alt="Flat" />
+                        <div class="pcard-badge badge-ready">Ready to Move</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">2 BHK Premium Flat</div>
+                        <div class="pcard-loc">📍 Khordha, Odisha</div>
+                        <div class="pcard-price">₹ 32,00,000</div>
+                        <div class="pcard-note">850 Sq. Ft. · 2nd Floor · Dedicated Parking</div>
+<a href="property-detail.html" class="pcard-wa" style="background: var(--gold); color: var(--dark);">View Full Details</a>
+                    </div>
+                </div>
+                <div class="pcard sr">
+                    <div class="pcard-img">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd64bd28?w=500&q=80" alt="Commercial" />
+                        <div class="pcard-badge badge-avail">Available</div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-name">Commercial Retail Space</div>
+                        <div class="pcard-loc">📍 Main Road, Bhubaneswar</div>
+                        <div class="pcard-price">₹ 20,000 / month</div>
+                        <div class="pcard-note">High Foot Traffic · Ground Floor · 24/7 Security</div>
+<a href="property-detail.html" class="pcard-wa" style="background: var(--gold); color: var(--dark);">View Full Details</a>                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">SK Property Odisha</div>
+        <div class="footer-note">Website Developed by Ajak Solutions</div>
+    </footer>
+
+    <a class="fwa" href="https://wa.me/916370534077?text=Hi%20I%20found%20SK%20Property%20Odisha%20and%20want%20to%20know%20more." target="_blank">💬</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

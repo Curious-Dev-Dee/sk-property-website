@@ -44,9 +44,14 @@ window.switchTab = function(id, btn) {
 }
 
 /* ── CONTACT FORM TO WHATSAPP ── */
+/* ── CONTACT FORM TO WHATSAPP ── */
 window.submitForm = function() {
     const name = document.getElementById('fn').value.trim();
     const phone = document.getElementById('fp').value.trim();
+    
+    // Check if the dropdown exists on the current page before trying to get its value
+    const interestDropdown = document.getElementById('fi');
+    const interest = interestDropdown ? interestDropdown.value : 'Not specified';
     
     if (!name || !phone) {
         alert('Please enter your name and phone number.');
@@ -54,6 +59,7 @@ window.submitForm = function() {
     }
     
     // Sends the form to the Sales Manager's number
-    const msg = `Jay Jagannath! 🙏%0A%0AI visited SKpropertyodisha.com and want to book a site visit.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0A%0APlease call me back.`;
+    const msg = `Jay Jagannath! 🙏%0A%0AI visited SKpropertyodisha.com and want to get in touch.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AInterested In: ${encodeURIComponent(interest)}%0A%0APlease call me back.`;
+    
     window.open(`https://wa.me/916370534077?text=${msg}`, '_blank');
 }

@@ -135,3 +135,120 @@ footer { background: var(--dark2); padding: 30px 6%; text-align: center; border-
     .stats-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
     .contact-inner { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   NEW BUYER-CENTRIC HERO & SEARCH BAR
+   ========================================================= */
+.hero { display: flex; justify-content: center; text-align: center; padding-top: 120px; }
+.hero-content { max-width: 800px; width: 100%; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+.hero-h1 { text-align: center; }
+.hero-desc { text-align: center; margin: 0 auto 30px auto; }
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(191,155,95,.2);
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-input { width: auto; margin-bottom: 0; min-width: 200px; background: var(--dark2); border-color: transparent; }
+.search-btn { padding: 15px 30px; }
+
+@media(max-width: 768px) {
+    .search-bar { flex-direction: column; }
+    .search-input, .search-btn { width: 100%; }
+}
+
+/* =========================================================
+   PROPERTY DETAIL PAGE SPECIFICS
+   ========================================================= */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start; /* Critical for sticky sidebar to work */
+}
+
+.detail-section {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(191,155,95,.1);
+}
+
+.detail-title {
+    font-family: var(--ff-display);
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+/* Quick Specs Row */
+.quick-specs {
+    display: flex;
+    gap: 20px;
+    background: var(--dark2);
+    padding: 20px;
+    border-radius: var(--r-lg);
+    border: 1px solid rgba(191,155,95,.1);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 120px;
+}
+
+.spec-icon {
+    font-size: 1.8rem;
+    background: rgba(191,155,95,.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Photo Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-img {
+    height: 200px;
+    border-radius: var(--r-lg);
+    cursor: pointer;
+    transition: transform var(--t);
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* Sticky Sidebar */
+.sidebar-card {
+    background: var(--dark3);
+    padding: 30px;
+    border-radius: var(--r-lg);
+    border: 1px solid rgba(191,155,95,.2);
+    position: sticky;
+    top: 100px; /* Sticks 100px from the top of the screen when scrolling */
+}
+
+/* Detail Page Responsive */
+@media(max-width: 960px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .sidebar-card {
+        position: static; /* Removes sticky behavior on mobile */
+    }
+}
