@@ -132,7 +132,7 @@ section { padding: 88px 6%; }
 }
 
 .pcard-name { font-family: var(--ff-display); font-size: 1.3rem; color: var(--white); }
-.pcard-price { font-family: var(--ff-display); font-size: 1.6rem; color: var(--gold); margin: 10px 0; }
+.pcard-price { font-family: var(--ff-display); font-size: 1.6rem; color: var(--white); font-weight: bold; margin: 10px 0; }
 .pcard-note { font-size: 0.9rem; color: var(--muted); }
 
 /* 4. Margin-top: auto is the magic trick that glues the button to the bottom! */

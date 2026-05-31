@@ -61,5 +61,5 @@ window.submitForm = function() {
     // Sends the form to the Sales Manager's number
     const msg = `Jay Jagannath! 🙏%0A%0AI visited SKpropertyodisha.com and want to get in touch.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AInterested In: ${encodeURIComponent(interest)}%0A%0APlease call me back.`;
     
-    window.open(`https://wa.me/916370534077?text=${msg}`, '_blank');
+    window.open(`https://wa.me/917008328481?text=${msg}`, '_blank');
 }
