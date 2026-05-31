@@ -34,9 +34,14 @@
         </div>
     </section>
 
-    <section class="properties" id="properties" style="padding-top: 40px;">
+    <section class="properties" id="properties">
+        <div class="sec-head sr">
+            <div class="chip">Our Properties</div>
+            <h2 class="sec-title">Find the Property<br/>That's Right for You</h2>
+        </div>
+
         <div class="tabs sr">
-            <button class="tab on" onclick="switchTab('plots',this)">Open Plots</button>
+            <button class="tab on" onclick="switchTab('plots',this)">Featured Plots</button>
             <button class="tab" onclick="switchTab('flats',this)">Flats & Commercial</button>
         </div>
 
@@ -74,7 +79,7 @@
                     </div>
                 </div>
 
-                <!-- DASIA BAURI PITHA PLOT (New) -->
+                <!-- DASIA BAURI PITHA PLOT -->
                 <div class="pcard sr">
                     <div class="pcard-img">
                         <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500&q=80" alt="Dasia Pitha Plot Placeholder" />
@@ -90,10 +95,12 @@
                 </div>
                 
             </div>
+        </div> <!-- This was the missing closing div! -->
             
-        <!-- FLATS & COMMERCIAL TAB (Newly Added) -->
+        <!-- FLATS & COMMERCIAL TAB -->
         <div class="tc" id="tc-flats">
             <div class="prop-grid">
+                
                 <!-- RADHIKA HOME DUPLEX -->
                 <div class="pcard sr">
                     <div class="pcard-img">
@@ -105,13 +112,14 @@
                         <div class="pcard-loc">📍 Rangabazar, Khordha</div>
                         <div class="pcard-price">From ₹ 55 Lakhs</div>
                         <div class="pcard-note" style="margin-bottom: 20px;">3 & 4 BHK Villas · Gated Community · LIC Approved</div>
-                        <a href="radhika-home.html" class="pcard-wa">View Full Details</a>
+                        <a href="radhika-home.html" class="pcard-wa" style="background: var(--gold); color: var(--white); border: none;">View Full Details</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
-
+    
     <footer>
         <div class="footer-brand">SK Property Odisha</div>
         <div class="footer-note">Website Developed by Ajak Solutions</div>
