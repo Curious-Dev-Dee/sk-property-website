@@ -213,7 +213,7 @@
         </div>
     </section>
 
-    <!-- ══ VIDEO TOUR SECTION ══ -->
+<!-- ══ VIDEO TOUR SECTION ══ -->
     <section class="video-tour" style="background: var(--dark); padding-top: 80px; padding-bottom: 40px;">
         <div class="sec-head sr" style="text-align: center; margin-bottom: 40px;">
             <div class="chip">Video Tour</div>
@@ -221,18 +221,33 @@
             <p class="sec-sub" style="margin: 0 auto;">Take a closer look at our latest developments and see the quality we bring to every project.</p>
         </div>
         
-        <div class="sr" style="max-width: 900px; margin: 0 auto; padding: 0 6%;">
-            <!-- Responsive 16:9 aspect ratio wrapper -->
+        <!-- Responsive Grid for Multiple Videos -->
+        <div class="sr" style="max-width: 1200px; margin: 0 auto; padding: 0 6%; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            
+            <!-- First Video -->
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--r-lg); border: 1px solid rgba(17, 120, 64, 0.3); box-shadow: 0 15px 35px rgba(0,0,0,0.4);">
                 <iframe 
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
                     src="https://www.youtube.com/embed/T6UZptef4RE?rel=0" 
-                    title="SK Property Video Tour" 
+                    title="SK Property Video Tour 1" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
                 </iframe>
             </div>
+
+            <!-- Second Video (Newly Added) -->
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--r-lg); border: 1px solid rgba(17, 120, 64, 0.3); box-shadow: 0 15px 35px rgba(0,0,0,0.4);">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/_gcjuklGUPs?rel=0" 
+                    title="SK Property Video Tour 2" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
         </div>
     </section>
 
